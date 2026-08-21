@@ -179,68 +179,10 @@
     text-transform:uppercase;
   }
 
-  /* REVIEWS — ОБНОВЛЕННАЯ СЕКЦИЯ ОТЗЫВОВ С ПРОЗРАЧНОЙ АВАТАРКОЙ */
-  .reviews{
-    background:var(--bg-panel); 
-    border-top:1px solid var(--line); 
-    border-bottom:1px solid var(--line);
-    position:relative;
-    overflow:hidden; /* Чтобы большая аватарка не вылезала за края секции */
-  }
-
-  /* Создаем невидимый фоновый слой для картинки */
-  .reviews::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Убедитесь, что файл лежит в той же папке или укажите правильный путь */
-    background-image: url('image_QlcAKC.png'); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 60%;
-    height: 85%;
-    /* Очень легкая прозрачность (0.03), чтобы текст хорошо читался */
-    opacity: 0.03; 
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  /* Выталкиваем реальный текст отзывов поверх фоновой картинки */
-  .reviews .wrap {
-    position: relative;
-    z-index: 1;
-  }
-
+  /* REVIEWS */
+  .reviews{background:var(--bg-panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   .rev-top{display:flex; align-items:baseline; gap:24px; margin-bottom:50px; flex-wrap:wrap;}
   .rev-score{font-family:'Oswald'; font-size:64px; font-weight:700; color:var(--red); line-height:1;}
   .rev-meta{color:var(--grey); font-size:14px; letter-spacing:0.5px;}
   .rev-stars{color:var(--red); font-size:18px; letter-spacing:2px;}
-  .rev-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}
-</style>
-</head>
-<body>
-
-  <!-- Пример разметки для проверки -->
-  <div class="hex-glow"></div>
-
-  <section class="reviews">
-    <div class="wrap">
-      <div class="rev-top">
-        <div class="rev-score">5.0</div>
-        <div class="rev-meta">
-          <div class="rev-stars">★★★★★</div>
-          <div>51 отзыв на Яндекс.Картах</div>
-        </div>
-      </div>
-      <div class="rev-grid">
-        <!-- Сюда будут вставляться карточки отзывов -->
-      </div>
-    </div>
-  </section>
-
-</body>
-</html>
-
+  .rev-grid{display:grid; grid-template-
